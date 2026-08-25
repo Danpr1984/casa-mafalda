@@ -1,0 +1,442 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+
+import imgHero      from '../../assets/images/beach-view.jpg';
+import imgPool      from '../../assets/images/restaurant.jpg';
+import imgNature    from '../../assets/images/hero.jpg';
+import imgRoom1     from '../../assets/images/room-1.jpg';
+import imgRoom2     from '../../assets/images/room-2.jpg';
+import imgLounge    from '../../assets/images/lounge.jpg';
+
+const WA_NUMBER  = "50500000000";
+const WA_MESSAGE = encodeURIComponent("Hi, I'd like to check availability at Casa Mafalda.");
+const WA_LINK    = `https://wa.me/${WA_NUMBER}?text=${WA_MESSAGE}`;
+const BOOKING_URL = WA_LINK;
+const INSTAGRAM  = "https://instagram.com/casamafalda";
+const EMAIL      = "info@casa-mafalda.com";
+---
+
+<BaseLayout
+  title="Casa Mafalda — El Coco, Nicaragua"
+  description="Eco-friendly beachfront house on El Coco beach, South Pacific Nicaragua. 8 guests, private pool, tropical garden and direct access to one of Central America's most beautiful beaches."
+  lang="en"
+>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="/en" class="nav-logo">Casa Mafalda</a>
+    <nav class="nav-links">
+      <a href={BOOKING_URL} target="_blank" rel="noopener">Rooms</a>
+      <a href="#experience">Experience</a>
+      <a href="#location">Location</a>
+      <a href={`mailto:${EMAIL}`}>Contact</a>
+    </nav>
+    <a href={BOOKING_URL} class="btn btn-primary nav-cta" target="_blank" rel="noopener">Book Now</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile">
+    <a href={BOOKING_URL} target="_blank" rel="noopener" class="nav-mobile-link">Book Now</a>
+    <a href={BOOKING_URL} target="_blank" rel="noopener" class="nav-mobile-link">Rooms</a>
+    <a href="#experience" class="nav-mobile-link">Experience</a>
+    <a href="#location" class="nav-mobile-link">Location</a>
+    <a href={`mailto:${EMAIL}`} class="nav-mobile-link">Contact</a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <Image src={imgHero} alt="Casa Mafalda beachfront — El Coco, Nicaragua" class="hero-bg" width={1600} height={900} loading="eager" />
+  <div class="hero-content">
+    <p class="hero-tag">El Coco · South Pacific · Nicaragua</p>
+    <h1 class="hero-title">A dream hideaway<br />on the Pacific</h1>
+    <p class="hero-sub">Eco-friendly home for 8 guests on one of Central America's most beautiful beaches</p>
+    <a href={BOOKING_URL} class="btn btn-hero" target="_blank" rel="noopener">Book Now</a>
+  </div>
+</section>
+
+<!-- ===================== INTRO ===================== -->
+<section class="intro section-sm">
+  <div class="container">
+    <div class="intro-stats">
+      <div class="intro-stat"><strong>8</strong><span>guests</span></div>
+      <div class="intro-stat"><strong>Direct</strong><span>beach access</span></div>
+      <div class="intro-stat"><strong>Pool</strong><span>& garden</span></div>
+      <div class="intro-stat"><strong>20 min</strong><span>from San Juan del Sur</span></div>
+    </div>
+    <p class="intro-body">
+      Sitting right across from a quiet beach, Casa Mafalda combines total privacy with complete immersion in nature. Surrounded by trees and birds, large screen windows let the Pacific breeze flow freely, ceiling fans overhead and open spaces designed to feel free. A place where time slows down.
+    </p>
+  </div>
+</section>
+
+<!-- ===================== HIGHLIGHTS ===================== -->
+<section class="highlights section-sm">
+  <div class="container">
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <div class="highlight-icon">🌊</div>
+        <h3>Direct beach access</h3>
+        <p>Walk straight from the house to one of the most pristine and beautiful beaches in Central America.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🏊</div>
+        <h3>Private pool</h3>
+        <p>One of the few properties in the area with its own pool, surrounded by tropical garden.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🌿</div>
+        <h3>Eco-friendly home</h3>
+        <p>Designed for airflow and natural ventilation, surrounded by nature and visited by birds every day.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🐢</div>
+        <h3>Turtle sanctuary</h3>
+        <p>Just 5 minutes by car from the sanctuary where thousands of sea turtles nest every year.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🔑</div>
+        <h3>Easy self check-in</h3>
+        <p>Flexible check-in with team support. Arrive at your own pace, no complications.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🛡️</div>
+        <h3>24h security</h3>
+        <p>Round-the-clock security so you can truly disconnect and relax.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SPLIT ===================== -->
+<section class="split-section section-sm">
+  <div class="split-img">
+    <Image src={imgPool} alt="Private pool and tropical garden — Casa Mafalda" width={800} height={600} loading="lazy" />
+  </div>
+  <div class="split-content">
+    <span class="section-label">Open spaces</span>
+    <h2>Designed to be lived in,<br />not just slept in</h2>
+    <p>Large screen windows, high ceilings and spaces that open onto the garden. The Pacific breeze flows freely through the entire house. A design that invites togetherness, memory-making and genuine rest.</p>
+    <ul class="feature-list">
+      <li>Pool with tropical garden</li>
+      <li>Recreational area and parking</li>
+      <li>Washing machine (stays over 1 week)</li>
+      <li>Full access to the entire house</li>
+    </ul>
+    <a href={BOOKING_URL} class="btn btn-primary" target="_blank" rel="noopener">Check availability</a>
+  </div>
+</section>
+
+<!-- ===================== ROOMS ===================== -->
+<section class="rooms section-sm" id="rooms">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Accommodation</span>
+      <h2 class="section-title">Spacious, cool<br />and surrounded by nature</h2>
+      <p class="section-sub">Complete house for 8 guests with rooms designed for rest and natural ventilation.</p>
+    </div>
+    <div class="rooms-grid">
+      <div class="room-card">
+        <a href={BOOKING_URL} target="_blank" rel="noopener" class="room-card-img-link">
+          <div class="room-card-img">
+            <Image src={imgRoom1} alt="Bedroom at Casa Mafalda — El Coco Nicaragua" width={600} height={450} loading="lazy" />
+          </div>
+        </a>
+        <div class="room-card-content">
+          <h3>Main bedrooms</h3>
+          <p>Spacious and breezy, with ceiling fans and screen windows for a constant natural Pacific breeze.</p>
+          <ul class="room-amenities">
+            <li>Ceiling fans</li>
+            <li>Screen windows</li>
+            <li>Garden access</li>
+          </ul>
+        </div>
+      </div>
+      <div class="room-card">
+        <a href={BOOKING_URL} target="_blank" rel="noopener" class="room-card-img-link">
+          <div class="room-card-img">
+            <Image src={imgRoom2} alt="Living spaces — Casa Mafalda" width={600} height={450} loading="lazy" />
+          </div>
+        </a>
+        <div class="room-card-content">
+          <h3>Common areas</h3>
+          <p>Living, dining and terrace that open into the garden. Open design that lets connection flow naturally.</p>
+          <ul class="room-amenities">
+            <li>Fully equipped kitchen</li>
+            <li>Outdoor terrace</li>
+            <li>Lounge area</li>
+          </ul>
+        </div>
+      </div>
+      <div class="room-card">
+        <a href={BOOKING_URL} target="_blank" rel="noopener" class="room-card-img-link">
+          <div class="room-card-img">
+            <Image src={imgLounge} alt="Pool and garden — Casa Mafalda" width={600} height={450} loading="lazy" />
+          </div>
+        </a>
+        <div class="room-card-content">
+          <h3>Garden & pool</h3>
+          <p>Private pool surrounded by tropical vegetation. Beach steps away. Living nature from day one.</p>
+          <ul class="room-amenities">
+            <li>Private pool</li>
+            <li>Parking area</li>
+            <li>Direct beach access</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EXPERIENCE ===================== -->
+<section class="experience section-sm" id="experience">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Experience</span>
+      <h2 class="section-title">El Coco awaits</h2>
+      <p class="section-sub">One of the most pristine and unspoiled beaches on Nicaragua's South Pacific coast.</p>
+    </div>
+    <div class="experience-grid">
+      <div class="exp-item">
+        <Image src={imgNature} alt="El Coco beach Nicaragua" width={600} height={400} loading="lazy" />
+        <div class="exp-content">
+          <h3>El Coco beach</h3>
+          <p>Black volcanic sand, Pacific waves and a nature that few beaches in the region have kept intact. Complete privacy.</p>
+        </div>
+      </div>
+      <div class="exp-item">
+        <Image src={imgPool} alt="Nature and birds — Casa Mafalda" width={600} height={400} loading="lazy" />
+        <div class="exp-content">
+          <h3>Living nature</h3>
+          <p>Surrounded by trees and constantly visited by different bird species. Wake up to the sound of the forest and the sea.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LOCATION ===================== -->
+<section class="location section-sm" id="location">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Location</span>
+      <h2 class="section-title">El Coco,<br />South Pacific Nicaragua</h2>
+    </div>
+    <div class="location-details">
+      <div class="location-item">📍 El Coco, Rivas, Nicaragua</div>
+      <div class="location-item">🚗 20 min from San Juan del Sur</div>
+      <div class="location-item">🐢 5 min from the Sea Turtle Sanctuary</div>
+      <div class="location-item">✈️ 2h from Managua</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOUSE RULES ===================== -->
+<section class="rules section-sm">
+  <div class="container rules-grid">
+    <div>
+      <h3>House rules</h3>
+      <ul class="rules-list">
+        <li>⏰ Check-in from 2:00 p.m.</li>
+        <li>⏰ Check-out before 12:00 p.m.</li>
+        <li>👥 Maximum 8 guests</li>
+        <li>🏠 Full access to the entire house</li>
+        <li>👗 Washing machine for stays over 1 week</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Any questions?</h3>
+      <p>Get in touch and we'll be happy to help.</p>
+      <a href={WA_LINK} class="btn btn-primary" target="_blank" rel="noopener" style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Message on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="cta-section">
+  <div class="cta-overlay"></div>
+  <Image src={imgNature} alt="Casa Mafalda El Coco Nicaragua" class="cta-bg" width={1600} height={600} loading="lazy" />
+  <div class="cta-content">
+    <h2>Your Pacific escape<br />is waiting for you</h2>
+    <p>Pick your dates and make memories that last a lifetime</p>
+    <a href={BOOKING_URL} class="btn btn-hero" target="_blank" rel="noopener">Book now</a>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">Casa Mafalda</span>
+      <p>El Coco · South Pacific · Nicaragua</p>
+    </div>
+    <nav class="footer-nav">
+      <a href={BOOKING_URL} target="_blank" rel="noopener">Book</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#experience">Experience</a>
+      <a href="#location">Location</a>
+    </nav>
+    <div class="footer-contact">
+      <a href={WA_LINK} target="_blank" rel="noopener">WhatsApp</a>
+      <a href={INSTAGRAM} target="_blank" rel="noopener">Instagram</a>
+      <a href={`mailto:${EMAIL}`}>Email</a>
+    </div>
+  </div>
+  <p class="footer-copy">made with care from Sweden 🇸🇪 · casa-mafalda.com</p>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('nav-mobile');
+  hamburger?.addEventListener('click', () => mobileNav?.classList.toggle('open'));
+</script>
+
+</BaseLayout>
+
+<style>
+  :root {
+    --sand: #F5EFE0;
+    --cream: #FDFAF4;
+    --forest: #1A3A2A;
+    --ocean: #1B5E78;
+    --ocean-light: #C8E6F0;
+    --gold: #C9963A;
+    --text: #1a1a1a;
+    --muted: #555;
+    --white: #fff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--cream); color: var(--text); }
+  img { display: block; max-width: 100%; }
+  a { text-decoration: none; color: inherit; }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  .section-sm { padding: 72px 0; }
+
+  .btn { display: inline-block; padding: 14px 28px; border-radius: 40px; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.2s; }
+  .btn-primary { background: var(--forest); color: var(--white); }
+  .btn-primary:hover { background: var(--gold); }
+  .btn-hero { background: var(--white); color: var(--forest); font-size: 15px; padding: 16px 36px; }
+  .btn-hero:hover { background: var(--gold); color: var(--white); }
+
+  .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(26,58,42,0.92); backdrop-filter: blur(8px); }
+  .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 24px; height: 64px; }
+  .nav-logo { font-weight: 800; font-size: 18px; color: var(--white); letter-spacing: -0.5px; flex: 1; }
+  .nav-links { display: flex; gap: 24px; }
+  .nav-links a { color: rgba(255,255,255,0.85); font-size: 14px; font-weight: 500; }
+  .nav-links a:hover { color: var(--white); }
+  .nav-cta { padding: 10px 22px; font-size: 13px; }
+  .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+  .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; }
+  .nav-mobile { display: none; background: var(--forest); padding: 16px 24px; flex-direction: column; gap: 16px; }
+  .nav-mobile.open { display: flex; }
+  .nav-mobile-link { color: rgba(255,255,255,0.9); font-size: 16px; font-weight: 500; }
+
+  .hero { position: relative; height: 100vh; min-height: 600px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(26,58,42,0.55) 0%, rgba(26,58,42,0.3) 50%, rgba(26,58,42,0.6) 100%); z-index: 1; }
+  .hero-content { position: relative; z-index: 2; text-align: center; color: var(--white); padding: 0 24px; }
+  .hero-tag { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.85; margin-bottom: 16px; }
+  .hero-title { font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 900; line-height: 1.1; letter-spacing: -1px; margin-bottom: 16px; text-shadow: 0 2px 16px rgba(0,0,0,0.3); }
+  .hero-sub { font-size: clamp(1rem, 2vw, 1.2rem); opacity: 0.9; margin-bottom: 32px; max-width: 520px; margin-left: auto; margin-right: auto; text-shadow: 0 1px 8px rgba(0,0,0,0.4); }
+
+  .intro-stats { display: flex; gap: 48px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; }
+  .intro-stat { text-align: center; }
+  .intro-stat strong { display: block; font-size: 1.8rem; font-weight: 800; color: var(--forest); }
+  .intro-stat span { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); }
+  .intro-body { max-width: 700px; margin: 0 auto; text-align: center; font-size: 1.05rem; line-height: 1.75; color: var(--muted); }
+
+  .highlights { background: var(--forest); }
+  .highlights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .highlight-card { color: var(--white); }
+  .highlight-icon { font-size: 2rem; margin-bottom: 12px; }
+  .highlight-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+  .highlight-card p { font-size: 14px; line-height: 1.6; opacity: 0.8; }
+
+  .split-section { display: grid; grid-template-columns: 1fr 1fr; gap: 0; max-width: 100%; }
+  .split-img img { width: 100%; height: 100%; object-fit: cover; min-height: 480px; }
+  .split-content { padding: 72px 64px; display: flex; flex-direction: column; justify-content: center; background: var(--sand); }
+  .split-content h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; line-height: 1.2; margin: 12px 0 20px; }
+  .split-content p { color: var(--muted); line-height: 1.7; margin-bottom: 24px; }
+  .feature-list { list-style: none; margin-bottom: 32px; display: flex; flex-direction: column; gap: 8px; }
+  .feature-list li { font-size: 14px; color: var(--muted); padding-left: 20px; position: relative; }
+  .feature-list li::before { content: '✓'; position: absolute; left: 0; color: var(--forest); font-weight: 700; }
+
+  .section-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
+  .section-header { text-align: center; margin-bottom: 48px; }
+  .section-title { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; line-height: 1.15; margin: 12px 0 16px; }
+  .section-sub { color: var(--muted); font-size: 1rem; line-height: 1.6; max-width: 560px; margin: 0 auto; }
+
+  .rooms { background: var(--cream); }
+  .rooms-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .room-card { background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
+  .room-card-img-link { display: block; }
+  .room-card-img-link:hover .room-card-img img { transform: scale(1.04); }
+  .room-card-img { aspect-ratio: 4/3; overflow: hidden; }
+  .room-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+  .room-card-content { padding: 20px; }
+  .room-card-content h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+  .room-card-content p { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 12px; }
+  .room-amenities { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+  .room-amenities li { font-size: 12px; color: var(--forest); font-weight: 600; padding-left: 16px; position: relative; }
+  .room-amenities li::before { content: '✓'; position: absolute; left: 0; }
+
+  .experience { background: var(--sand); }
+  .experience-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .exp-item img { width: 100%; border-radius: 16px; aspect-ratio: 3/2; object-fit: cover; margin-bottom: 20px; }
+  .exp-content h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+  .exp-content p { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+  .location { background: var(--cream); }
+  .location-details { display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; }
+  .location-item { background: var(--sand); padding: 16px 24px; border-radius: 12px; font-size: 14px; font-weight: 600; }
+
+  .rules { background: var(--forest); color: var(--white); }
+  .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  .rules h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; }
+  .rules-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .rules-list li { font-size: 14px; opacity: 0.9; line-height: 1.5; }
+  .rules p { opacity: 0.8; font-size: 14px; line-height: 1.6; }
+
+  .cta-section { position: relative; height: 420px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .cta-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .cta-overlay { position: absolute; inset: 0; background: rgba(26,58,42,0.65); z-index: 1; }
+  .cta-content { position: relative; z-index: 2; text-align: center; color: var(--white); padding: 0 24px; }
+  .cta-content h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; line-height: 1.15; margin-bottom: 16px; }
+  .cta-content p { opacity: 0.85; margin-bottom: 28px; font-size: 1rem; }
+
+  .footer { background: #0f1f16; color: var(--white); padding: 48px 24px 24px; }
+  .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; gap: 48px; flex-wrap: wrap; justify-content: space-between; margin-bottom: 40px; }
+  .footer-logo { font-size: 1.2rem; font-weight: 800; }
+  .footer-brand p { font-size: 13px; opacity: 0.6; margin-top: 6px; }
+  .footer-nav, .footer-contact { display: flex; flex-direction: column; gap: 10px; }
+  .footer-nav a, .footer-contact a { font-size: 13px; opacity: 0.7; }
+  .footer-nav a:hover, .footer-contact a:hover { opacity: 1; }
+  .footer-copy { text-align: center; font-size: 12px; opacity: 0.4; max-width: 1100px; margin: 0 auto; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); }
+
+  @media (max-width: 900px) {
+    .highlights-grid { grid-template-columns: repeat(2, 1fr); }
+    .rooms-grid { grid-template-columns: repeat(2, 1fr); }
+    .split-section { grid-template-columns: 1fr; }
+    .split-img img { min-height: 300px; }
+    .split-content { padding: 48px 24px; }
+    .experience-grid { grid-template-columns: 1fr; }
+    .rules-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+  @media (max-width: 640px) {
+    .nav-links, .nav-cta { display: none; }
+    .nav-hamburger { display: flex; margin-left: auto; }
+    .highlights-grid { grid-template-columns: 1fr; }
+    .rooms-grid { grid-template-columns: 1fr; }
+    .intro-stats { gap: 24px; }
+    .location-details { flex-direction: column; align-items: center; }
+  }
+</style>

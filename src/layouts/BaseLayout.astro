@@ -1,0 +1,82 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  lang?: string;
+}
+
+const {
+  title = "Casa Mafalda — El Coco, Nicaragua",
+  description = "Casa ecológica frente al mar en El Coco, Pacífico sur de Nicaragua. 8 huéspedes, piscina privada, jardín tropical y acceso directo a una de las playas más lindas de Centroamérica.",
+  lang = "es",
+} = Astro.props;
+
+const siteUrl = "https://casa-mafalda.com";
+const ogImage = `${siteUrl}/images/hero.jpg`;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={lang === 'en' ? `${siteUrl}/en/` : siteUrl} />
+    <link rel="alternate" hreflang="es" href={siteUrl} />
+    <link rel="alternate" hreflang="en" href={`${siteUrl}/en/`} />
+    <link rel="alternate" hreflang="x-default" href={siteUrl} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="casa mafalda, el coco nicaragua, playa el coco nicaragua, casa playa nicaragua, pacifico sur nicaragua, san juan del sur, alquiler casa nicaragua" />
+    <meta name="author" content="Casa Mafalda" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content="es_NI" />
+    <meta property="og:site_name" content="Casa Mafalda" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VacationRental",
+        "name": "Casa Mafalda",
+        "description": "Casa ecológica frente al mar en El Coco, Pacífico sur de Nicaragua. 8 huéspedes, piscina privada, jardín tropical y acceso directo a una de las playas más lindas de Centroamérica.",
+        "url": "https://casa-mafalda.com",
+        "image": ["https://casa-mafalda.com/images/hero.jpg"],
+        "email": "info@casa-mafalda.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "El Coco",
+          "addressRegion": "Rivas",
+          "addressCountry": "NI"
+        },
+        "priceRange": "$$",
+        "amenityFeature": [
+          { "@type": "LocationFeatureSpecification", "name": "Piscina privada", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Acceso directo a la playa", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Jardín tropical", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Seguridad 24h", "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Parking", "value": true }
+        ]
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
