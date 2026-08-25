@@ -67,6 +67,7 @@ const EMAIL      = "info@casa-mafalda.com";
       <a href="#ubicacion">Ubicación</a>
       <a href={`mailto:${EMAIL}`}>Contacto</a>
     </nav>
+    <a href="/en/" class="lang-switch" aria-label="English version">EN</a>
     <a href={BOOKING_URL} class="btn btn-primary nav-cta" target="_blank" rel="noopener">Reservar</a>
     <button class="nav-hamburger" id="hamburger" aria-label="Menú">
       <span></span><span></span><span></span>
@@ -392,6 +393,8 @@ const EMAIL      = "info@casa-mafalda.com";
   .nav-links a { color: var(--muted); font-size: 14px; font-weight: 500; }
   .nav-links a:hover { color: var(--text); }
   .nav-cta { padding: 10px 22px; font-size: 13px; }
+  .lang-switch { font-size: 12px; font-weight: 700; color: var(--muted); letter-spacing: 0.08em; border: 1.5px solid #D4B896; border-radius: 20px; padding: 5px 11px; transition: all 0.2s; text-decoration: none; }
+  .lang-switch:hover { color: var(--text); border-color: var(--text); }
   .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
   .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; }
   .nav-mobile { display: none; background: #FFE5B4; padding: 16px 24px; flex-direction: column; gap: 16px; }
