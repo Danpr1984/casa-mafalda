@@ -1,14 +1,44 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
+import Carousel from '../../components/Carousel.astro';
 
 import imgHero      from '../../assets/images/hero-mafalda.jpg';
 import imgPool      from '../../assets/images/pool3.jpg';
 import imgNature    from '../../assets/images/garden-mafalda1.jpg';
-import imgRoom1     from '../../assets/images/mainroom.jpg';
-import imgRoom2     from '../../assets/images/loungemafalda1.jpg';
-import imgLounge    from '../../assets/images/dinermafalda1.jpg';
-import imgPoolDetail from '../../assets/images/poolmafalda1.jpg';
+
+const houseCarouselImgs = [
+  '/images/mafalda/pool-beach.jpg',
+  '/images/mafalda/pool1.jpg',
+  '/images/mafalda/pool2.jpg',
+  '/images/mafalda/house-ext.jpg',
+  '/images/mafalda/garden1.jpg',
+  '/images/mafalda/entrance.jpg',
+  '/images/mafalda/lounge1.jpg',
+  '/images/mafalda/house1.jpg',
+];
+
+const room1Imgs = [
+  '/images/mafalda/room1.jpg',
+  '/images/mafalda/room2.jpg',
+  '/images/mafalda/room3.jpg',
+  '/images/mafalda/room4.jpg',
+];
+
+const room2Imgs = [
+  '/images/mafalda/lounge1.jpg',
+  '/images/mafalda/lounge2.jpg',
+  '/images/mafalda/diner1.jpg',
+  '/images/mafalda/kitchen.jpg',
+];
+
+const room3Imgs = [
+  '/images/mafalda/pool-beach.jpg',
+  '/images/mafalda/pool1.jpg',
+  '/images/mafalda/pool2.jpg',
+  '/images/mafalda/garden1.jpg',
+  '/images/mafalda/garden2.jpg',
+];
 
 const WA_NUMBER  = "50500000000";
 const WA_MESSAGE = encodeURIComponent("Hi, I'd like to check availability at Casa Mafalda.");
@@ -78,7 +108,7 @@ const EMAIL      = "info@casa-mafalda.com";
 <!-- ===================== SPLIT ===================== -->
 <section class="split-section section-sm">
   <div class="split-img">
-    <Image src={imgPoolDetail} alt="Private pool and tropical garden — Casa Mafalda" width={800} height={600} loading="lazy" />
+    <Carousel images={houseCarouselImgs} id="carousel-house-en" alt="Casa Mafalda" aspectRatio="4/3" />
   </div>
   <div class="split-content">
     <span class="section-label">Open spaces</span>
@@ -104,11 +134,9 @@ const EMAIL      = "info@casa-mafalda.com";
     </div>
     <div class="rooms-grid">
       <div class="room-card">
-        <a href={BOOKING_URL} target="_blank" rel="noopener" class="room-card-img-link">
-          <div class="room-card-img">
-            <Image src={imgRoom1} alt="Bedroom at Casa Mafalda — El Coco Nicaragua" width={600} height={450} loading="lazy" />
-          </div>
-        </a>
+        <div class="room-card-img">
+          <Carousel images={room1Imgs} id="carousel-rooms-en" alt="Bedroom Casa Mafalda" aspectRatio="4/3" />
+        </div>
         <div class="room-card-content">
           <h3>Main bedrooms</h3>
           <p>Spacious and breezy, with ceiling fans and screen windows for a constant natural Pacific breeze.</p>
@@ -117,14 +145,13 @@ const EMAIL      = "info@casa-mafalda.com";
             <li>Screen windows</li>
             <li>Garden access</li>
           </ul>
+          <a href={BOOKING_URL} class="btn btn-primary btn-sm" target="_blank" rel="noopener">Book now</a>
         </div>
       </div>
       <div class="room-card">
-        <a href={BOOKING_URL} target="_blank" rel="noopener" class="room-card-img-link">
-          <div class="room-card-img">
-            <Image src={imgRoom2} alt="Living spaces — Casa Mafalda" width={600} height={450} loading="lazy" />
-          </div>
-        </a>
+        <div class="room-card-img">
+          <Carousel images={room2Imgs} id="carousel-common-en" alt="Common areas Casa Mafalda" aspectRatio="4/3" />
+        </div>
         <div class="room-card-content">
           <h3>Common areas</h3>
           <p>Living, dining and terrace that open into the garden. Open design that lets connection flow naturally.</p>
@@ -133,14 +160,13 @@ const EMAIL      = "info@casa-mafalda.com";
             <li>Outdoor terrace</li>
             <li>Lounge area</li>
           </ul>
+          <a href={BOOKING_URL} class="btn btn-primary btn-sm" target="_blank" rel="noopener">Book now</a>
         </div>
       </div>
       <div class="room-card">
-        <a href={BOOKING_URL} target="_blank" rel="noopener" class="room-card-img-link">
-          <div class="room-card-img">
-            <Image src={imgLounge} alt="Pool and garden — Casa Mafalda" width={600} height={450} loading="lazy" />
-          </div>
-        </a>
+        <div class="room-card-img">
+          <Carousel images={room3Imgs} id="carousel-pool-en" alt="Pool and garden Casa Mafalda" aspectRatio="4/3" />
+        </div>
         <div class="room-card-content">
           <h3>Garden & pool</h3>
           <p>Private pool surrounded by tropical vegetation. Beach steps away. Living nature from day one.</p>
@@ -149,6 +175,7 @@ const EMAIL      = "info@casa-mafalda.com";
             <li>Parking area</li>
             <li>Direct beach access</li>
           </ul>
+          <a href={BOOKING_URL} class="btn btn-primary btn-sm" target="_blank" rel="noopener">Book now</a>
         </div>
       </div>
     </div>
@@ -218,6 +245,20 @@ const EMAIL      = "info@casa-mafalda.com";
         <div class="exp-content">
           <h3>Living nature</h3>
           <p>Surrounded by trees and constantly visited by different bird species. Wake up to the sound of the forest and the sea.</p>
+        </div>
+      </div>
+      <div class="exp-item">
+        <img src="/images/mafalda/sunset1.jpg" alt="Sunset at El Coco Nicaragua" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;" />
+        <div class="exp-content">
+          <h3>Unforgettable sunsets</h3>
+          <p>The South Pacific paints the sky in deep orange and gold every evening. A spectacle you simply cannot forget.</p>
+        </div>
+      </div>
+      <div class="exp-item">
+        <img src="/images/mafalda/sunset2.jpg" alt="El Coco beach sunset Nicaragua" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;" />
+        <div class="exp-content">
+          <h3>El Coco is calling</h3>
+          <p>20 minutes from San Juan del Sur, and a world away from the everyday. Time here is measured in tides.</p>
         </div>
       </div>
     </div>
@@ -327,6 +368,7 @@ const EMAIL      = "info@casa-mafalda.com";
   .section-sm { padding: 72px 0; }
 
   .btn { display: inline-block; padding: 14px 28px; border-radius: 40px; font-weight: 600; font-size: 14px; cursor: pointer; transition: all 0.2s; }
+  .btn-sm { padding: 10px 20px; font-size: 13px; margin-top: 12px; }
   .btn-primary { background: var(--forest); color: var(--white); }
   .btn-primary:hover { background: var(--gold); }
   .btn-hero { background: var(--white); color: var(--forest); font-size: 15px; padding: 16px 36px; }
@@ -385,8 +427,7 @@ const EMAIL      = "info@casa-mafalda.com";
   .room-card { background: var(--white); border-radius: 16px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
   .room-card-img-link { display: block; }
   .room-card-img-link:hover .room-card-img img { transform: scale(1.04); }
-  .room-card-img { aspect-ratio: 4/3; overflow: hidden; }
-  .room-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+  .room-card-img { overflow: hidden; border-radius: 16px 16px 0 0; }
   .room-card-content { padding: 20px; }
   .room-card-content h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
   .room-card-content p { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 12px; }
