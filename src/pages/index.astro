@@ -2,12 +2,13 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
 
-import imgHero      from '../assets/images/beach-view.jpg';
-import imgPool      from '../assets/images/restaurant.jpg';
-import imgNature    from '../assets/images/hero.jpg';
-import imgRoom1     from '../assets/images/room-1.jpg';
-import imgRoom2     from '../assets/images/room-2.jpg';
-import imgLounge    from '../assets/images/lounge.jpg';
+import imgHero      from '../assets/images/hero-mafalda.jpg';
+import imgPool      from '../assets/images/pool3.jpg';
+import imgNature    from '../assets/images/garden-mafalda1.jpg';
+import imgRoom1     from '../assets/images/mainroom.jpg';
+import imgRoom2     from '../assets/images/loungemafalda1.jpg';
+import imgLounge    from '../assets/images/dinermafalda1.jpg';
+import imgPoolDetail from '../assets/images/poolmafalda1.jpg';
 
 const WA_NUMBER  = "50500000000";
 const WA_MESSAGE = encodeURIComponent("Hola, me gustaría consultar disponibilidad en Casa Mafalda.");
@@ -115,7 +116,7 @@ const EMAIL      = "info@casa-mafalda.com";
 <!-- ===================== POOL / NATURE ===================== -->
 <section class="split-section section-sm">
   <div class="split-img">
-    <Image src={imgPool} alt="Piscina y jardín tropical — Casa Mafalda" width={800} height={600} loading="lazy" />
+    <Image src={imgPoolDetail} alt="Piscina y jardín tropical — Casa Mafalda" width={800} height={600} loading="lazy" />
   </div>
   <div class="split-content">
     <span class="section-label">Espacios abiertos</span>
@@ -302,14 +303,14 @@ const EMAIL      = "info@casa-mafalda.com";
 
 <style>
   :root {
-    --sand: #F5EFE0;
-    --cream: #FDFAF4;
-    --forest: #1A3A2A;
-    --ocean: #1B5E78;
-    --ocean-light: #C8E6F0;
-    --gold: #C9963A;
-    --text: #1a1a1a;
-    --muted: #555;
+    --sand: #F5EDE4;
+    --cream: #FDF8F5;
+    --forest: #7D3E28;
+    --ocean: #C4714F;
+    --ocean-light: #F2C9B8;
+    --gold: #C4714F;
+    --text: #2C1A12;
+    --muted: #6B4C3B;
     --white: #fff;
   }
 
@@ -329,7 +330,7 @@ const EMAIL      = "info@casa-mafalda.com";
   .btn-hero:hover { background: var(--gold); color: var(--white); }
 
   /* NAV */
-  .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(26,58,42,0.92); backdrop-filter: blur(8px); }
+  .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(74,35,24,0.92); backdrop-filter: blur(8px); }
   .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 24px; height: 64px; }
   .nav-logo { font-weight: 800; font-size: 18px; color: var(--white); letter-spacing: -0.5px; flex: 1; }
   .nav-links { display: flex; gap: 24px; }
@@ -359,7 +360,7 @@ const EMAIL      = "info@casa-mafalda.com";
   .intro-body { max-width: 700px; margin: 0 auto; text-align: center; font-size: 1.05rem; line-height: 1.75; color: var(--muted); }
 
   /* HIGHLIGHTS */
-  .highlights { background: var(--forest); }
+  .highlights { background: #4A2318; }
   .highlights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
   .highlight-card { color: var(--white); }
   .highlight-icon { font-size: 2rem; margin-bottom: 12px; }
@@ -410,7 +411,7 @@ const EMAIL      = "info@casa-mafalda.com";
   .location-item { background: var(--sand); padding: 16px 24px; border-radius: 12px; font-size: 14px; font-weight: 600; }
 
   /* RULES */
-  .rules { background: var(--forest); color: var(--white); }
+  .rules { background: #4A2318; color: var(--white); }
   .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; max-width: 1100px; margin: 0 auto; padding: 0 24px; }
   .rules h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; }
   .rules-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
@@ -426,7 +427,7 @@ const EMAIL      = "info@casa-mafalda.com";
   .cta-content p { opacity: 0.85; margin-bottom: 28px; font-size: 1rem; }
 
   /* FOOTER */
-  .footer { background: #0f1f16; color: var(--white); padding: 48px 24px 24px; }
+  .footer { background: #2C1208; color: var(--white); padding: 48px 24px 24px; }
   .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; gap: 48px; flex-wrap: wrap; justify-content: space-between; margin-bottom: 40px; }
   .footer-logo { font-size: 1.2rem; font-weight: 800; }
   .footer-brand p { font-size: 13px; opacity: 0.6; margin-top: 6px; }
