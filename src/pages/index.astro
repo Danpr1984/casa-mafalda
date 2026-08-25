@@ -75,44 +75,6 @@ const EMAIL      = "info@casa-mafalda.com";
   </div>
 </section>
 
-<!-- ===================== HIGHLIGHTS ===================== -->
-<section class="highlights section-sm">
-  <div class="container">
-    <div class="highlights-grid">
-      <div class="highlight-card">
-        <div class="highlight-icon">🌊</div>
-        <h3>Acceso directo al mar</h3>
-        <p>Camina directamente desde la casa hasta una de las playas más vírgenes y bellas de Centroamérica.</p>
-      </div>
-      <div class="highlight-card">
-        <div class="highlight-icon">🏊</div>
-        <h3>Piscina privada</h3>
-        <p>Uno de los pocos lugares en la zona con piscina propia, rodeada de jardín tropical.</p>
-      </div>
-      <div class="highlight-card">
-        <div class="highlight-icon">🌿</div>
-        <h3>Casa ecológica</h3>
-        <p>Diseñada para la circulación del aire, rodeada de naturaleza y constantemente visitada por aves.</p>
-      </div>
-      <div class="highlight-card">
-        <div class="highlight-icon">🐢</div>
-        <h3>Santuario de tortugas</h3>
-        <p>A solo 5 minutos en coche del santuario donde miles de tortugas llegan cada año.</p>
-      </div>
-      <div class="highlight-card">
-        <div class="highlight-icon">🔑</div>
-        <h3>Llegada autónoma</h3>
-        <p>Check-in flexible con apoyo del personal. Llega a tu hora sin complicaciones.</p>
-      </div>
-      <div class="highlight-card">
-        <div class="highlight-icon">🛡️</div>
-        <h3>Seguridad 24h</h3>
-        <p>Servicio de seguridad las 24 horas para que te desconectes con total tranquilidad.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===================== POOL / NATURE ===================== -->
 <section class="split-section section-sm">
   <div class="split-img">
@@ -188,6 +150,48 @@ const EMAIL      = "info@casa-mafalda.com";
             <li>Acceso directo a la playa</li>
           </ul>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HIGHLIGHTS ===================== -->
+<section class="highlights section-sm">
+  <div class="container">
+    <div class="section-header" style="margin-bottom:40px;">
+      <span class="section-label">Lo que te espera</span>
+      <h2 class="section-title" style="color:#3D2008;">Todo incluido,<br/>desde el primer día</h2>
+    </div>
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <div class="highlight-icon">🌊</div>
+        <h3>Acceso directo al mar</h3>
+        <p>Camina directamente desde la casa hasta una de las playas más vírgenes y bellas de Centroamérica.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🏊</div>
+        <h3>Piscina privada</h3>
+        <p>Uno de los pocos lugares en la zona con piscina propia, rodeada de jardín tropical.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🌿</div>
+        <h3>Casa ecológica</h3>
+        <p>Diseñada para la circulación del aire, rodeada de naturaleza y constantemente visitada por aves.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🐢</div>
+        <h3>Santuario de tortugas</h3>
+        <p>A solo 5 minutos en coche del santuario donde miles de tortugas llegan cada año.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🔑</div>
+        <h3>Llegada autónoma</h3>
+        <p>Check-in flexible con apoyo del personal. Llega a tu hora sin complicaciones.</p>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🛡️</div>
+        <h3>Seguridad 24h</h3>
+        <p>Servicio de seguridad las 24 horas para que te desconectes con total tranquilidad.</p>
       </div>
     </div>
   </div>
@@ -360,12 +364,12 @@ const EMAIL      = "info@casa-mafalda.com";
   .intro-body { max-width: 700px; margin: 0 auto; text-align: center; font-size: 1.05rem; line-height: 1.75; color: var(--muted); }
 
   /* HIGHLIGHTS */
-  .highlights { background: #C8773A; }
-  .highlights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-  .highlight-card { color: var(--white); }
-  .highlight-icon { font-size: 2rem; margin-bottom: 12px; }
-  .highlight-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
-  .highlight-card p { font-size: 14px; line-height: 1.6; opacity: 0.8; }
+  .highlights { background: var(--cream); }
+  .highlights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .highlight-card { background: #fff; border: 1px solid #F0D9C4; border-radius: 16px; padding: 28px 24px; }
+  .highlight-icon { font-size: 1.6rem; margin-bottom: 14px; }
+  .highlight-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; color: var(--text); }
+  .highlight-card p { font-size: 13px; line-height: 1.65; color: var(--muted); }
 
   /* SPLIT */
   .split-section { display: grid; grid-template-columns: 1fr 1fr; gap: 0; max-width: 100%; }
