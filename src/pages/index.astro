@@ -303,14 +303,14 @@ const EMAIL      = "info@casa-mafalda.com";
 
 <style>
   :root {
-    --sand: #F5EDE4;
-    --cream: #FDF8F5;
-    --forest: #7D3E28;
-    --ocean: #C4714F;
-    --ocean-light: #F2C9B8;
-    --gold: #C4714F;
-    --text: #2C1A12;
-    --muted: #6B4C3B;
+    --sand: #FFF3E0;
+    --cream: #FFFAF4;
+    --forest: #B5651D;
+    --ocean: #D4845A;
+    --ocean-light: #FFE5B4;
+    --gold: #C8773A;
+    --text: #3D2008;
+    --muted: #7A5C3E;
     --white: #fff;
   }
 
@@ -330,18 +330,18 @@ const EMAIL      = "info@casa-mafalda.com";
   .btn-hero:hover { background: var(--gold); color: var(--white); }
 
   /* NAV */
-  .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(74,35,24,0.92); backdrop-filter: blur(8px); }
+  .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(255,229,180,0.96); backdrop-filter: blur(8px); }
   .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 24px; height: 64px; }
-  .nav-logo { font-weight: 800; font-size: 18px; color: var(--white); letter-spacing: -0.5px; flex: 1; }
+  .nav-logo { font-weight: 800; font-size: 18px; color: var(--text); letter-spacing: -0.5px; flex: 1; }
   .nav-links { display: flex; gap: 24px; }
-  .nav-links a { color: rgba(255,255,255,0.85); font-size: 14px; font-weight: 500; }
-  .nav-links a:hover { color: var(--white); }
+  .nav-links a { color: var(--muted); font-size: 14px; font-weight: 500; }
+  .nav-links a:hover { color: var(--text); }
   .nav-cta { padding: 10px 22px; font-size: 13px; }
   .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
-  .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; }
-  .nav-mobile { display: none; background: var(--forest); padding: 16px 24px; flex-direction: column; gap: 16px; }
+  .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; }
+  .nav-mobile { display: none; background: #FFE5B4; padding: 16px 24px; flex-direction: column; gap: 16px; }
   .nav-mobile.open { display: flex; }
-  .nav-mobile-link { color: rgba(255,255,255,0.9); font-size: 16px; font-weight: 500; }
+  .nav-mobile-link { color: var(--text); font-size: 16px; font-weight: 500; }
 
   /* HERO */
   .hero { position: relative; height: 100vh; min-height: 600px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
@@ -360,7 +360,7 @@ const EMAIL      = "info@casa-mafalda.com";
   .intro-body { max-width: 700px; margin: 0 auto; text-align: center; font-size: 1.05rem; line-height: 1.75; color: var(--muted); }
 
   /* HIGHLIGHTS */
-  .highlights { background: #4A2318; }
+  .highlights { background: #C8773A; }
   .highlights-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
   .highlight-card { color: var(--white); }
   .highlight-icon { font-size: 2rem; margin-bottom: 12px; }
@@ -411,7 +411,7 @@ const EMAIL      = "info@casa-mafalda.com";
   .location-item { background: var(--sand); padding: 16px 24px; border-radius: 12px; font-size: 14px; font-weight: 600; }
 
   /* RULES */
-  .rules { background: #4A2318; color: var(--white); }
+  .rules { background: #FFE5B4; color: var(--text); }
   .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; max-width: 1100px; margin: 0 auto; padding: 0 24px; }
   .rules h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; }
   .rules-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
@@ -427,7 +427,7 @@ const EMAIL      = "info@casa-mafalda.com";
   .cta-content p { opacity: 0.85; margin-bottom: 28px; font-size: 1rem; }
 
   /* FOOTER */
-  .footer { background: #2C1208; color: var(--white); padding: 48px 24px 24px; }
+  .footer { background: #6B3A1F; color: var(--white); padding: 48px 24px 24px; }
   .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; gap: 48px; flex-wrap: wrap; justify-content: space-between; margin-bottom: 40px; }
   .footer-logo { font-size: 1.2rem; font-weight: 800; }
   .footer-brand p { font-size: 13px; opacity: 0.6; margin-top: 6px; }
